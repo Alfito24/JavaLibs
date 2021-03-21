@@ -2,7 +2,7 @@ package com.tutorial;
 
 import javax.swing.*;
 
-public class Main3 {
+public class JavaLibs5026201146 {
     public static void main(String[] args) {
         String name, favoriteClub, favoritePlayer, stadium, describePlayer;
         int win, draw, totalPoints, title, year, capacity, games;
