@@ -5,7 +5,7 @@ import javax.swing.*;
 public class JavaLibs5026201146 {
     public static void main(String[] args) {
         String name, favoriteClub, favoritePlayer, stadium, describePlayer;
-        int win, draw, totalPoints, title, year, capacity, games;
+        int win, draw, totalPoints, title, year, capacity, games, loses;
         double  price, income, average;
         JOptionPane.showMessageDialog(null, "Hello Everyone, Welcome to Our Survey, Please fill the questions");
         name = JOptionPane.showInputDialog(null, "What is your name");
@@ -19,16 +19,17 @@ public class JavaLibs5026201146 {
         capacity = Integer.parseInt(JOptionPane.showInputDialog(null, "How many capacity in that stadium?"));
         price = Double.parseDouble(JOptionPane.showInputDialog(null, "How many the ticket price in USD?"));
         income = (double) capacity * price;
-        games = Integer.parseInt(JOptionPane.showInputDialog(null, "How many times " + favoriteClub + " play this season?"));
         win = Integer.parseInt(JOptionPane.showInputDialog(null, "How many wins that the " + favoriteClub + " get this season? "));
         draw = Integer.parseInt(JOptionPane.showInputDialog(null, "How many draws that " + favoriteClub + " get this season? "));
+        loses = Integer.parseInt(JOptionPane.showInputDialog(null, "How many loses that " + favoriteClub + " get this season? "));
+        games = win + draw + loses;
         totalPoints = (3 * win) + (1 * draw);
         average =  (double) totalPoints / games;
         String win2 = Integer.toString(win);
         JOptionPane.showMessageDialog(null, "Thank you " + name + " for your answers. Lets recap your answers");
-        JOptionPane.showMessageDialog(null, name + " is the football fans, " + "He/She knows everything about " + favoriteClub + "\n" +
+        JOptionPane.showMessageDialog(null, name + " is the football fans, " + "He/She knows everything about " + favoriteClub  +
                 name + " said that " + favoriteClub + " was estabilished in " + year + ", " + "now, " + favoriteClub + " has " + title + " trophies\n" + name + " favorite player is " + favoritePlayer + ", "  + name + " thinks " + favoritePlayer + " is " + describePlayer +
                 "\nThe name of " + favoriteClub + " stadium is " + stadium + ", the capacity is " + capacity + ". If stadium full, total income is " + " $" +income + "\n" +
-                "This season " + favoriteClub + " play " + games + " games and " +" get " + win2 + " wins and " + draw + " draws " + ", so " + favoriteClub + " get " + totalPoints + " points " + " get " + average + " per game" );
+                "This season " + favoriteClub + " play " + games + " games, get " + win2 + " wins, " + draw + " draws ,and  " + loses + " loses" + ", so " + favoriteClub + " get " + totalPoints + " points " + " get " + average + " per game" );
     }
 }
